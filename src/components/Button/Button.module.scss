@@ -1,0 +1,44 @@
+.button {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #0F2C59; 
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+
+  &:hover:not(:disabled) {
+    background-color: #F8B400;
+    box-shadow: 0 4px 12px rgba(15, 44, 89, 0.2);
+    transform: translateY(-2px);
+  }
+
+  &:active:not(:disabled) {
+    transform: translateY(0);
+  }
+
+  &:disabled {
+    background-color: #CBD5E0;
+    cursor: not-allowed;
+  }
+
+  .loader {
+    width: 20px;
+    height: 20px;
+    margin: 0 auto;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: white;
+    animation: spin 1s ease-in-out infinite;
+  }
+
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+}
