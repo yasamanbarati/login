@@ -1,0 +1,169 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 1rem;
+  background: #f5f7fa;
+}
+
+.dashboardCard {
+  width: 100%;
+  max-width: 500px;
+  padding: 2.5rem;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  position: relative;
+}
+
+.header {
+  margin-bottom: 2rem;
+}
+
+.title {
+  color: #0F2C59;
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin: 0;
+  text-align: center;
+}
+
+.welcomeSection {
+  padding: 2rem 0;
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.welcomeIcon {
+  width: 70px;
+  height: 70px;
+  background-color: #F0F4F9;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  border: 2px solid #0F2C59;
+
+  svg {
+    width: 35px;
+    height: 35px;
+    fill: #0F2C59;
+  }
+}
+
+.welcomeText {
+  font-size: 1.5rem;
+  color: #333333;
+  margin-bottom: 1rem;
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+.userName {
+  color: #0F2C59;
+  font-weight: 700;
+}
+
+.message {
+  color: #666666;
+  font-size: 1.1rem;
+  font-weight: 400;
+  margin-top: 0.5rem;
+}
+
+.infoSection {
+  background: #F8FAFC;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin: 2rem 0;
+}
+
+.infoRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  border-bottom: 1px solid #EDF2F7;
+  
+  &:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+}
+
+.infoLabel {
+  font-size: 1rem;
+  color: #666666;
+  font-weight: 500;
+}
+
+.infoValue {
+  font-size: 1.1rem;
+  color: #0F2C59;
+  font-weight: 600;
+}
+
+.activeStatus {
+  color: #00B69B;
+  font-weight: 600;
+}
+
+.logoutButton {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #0F2C59;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:hover {
+    background-color: #0a1f3f;
+    box-shadow: 0 4px 12px rgba(15, 44, 89, 0.2);
+  }
+}
+
+.loadingContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.loader {
+  width: 50px;
+  height: 50px;
+  border: 5px solid rgba(15, 44, 89, 0.2);
+  border-radius: 50%;
+  border-top-color: #0F2C59;
+  animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 600px) {
+  .dashboardCard {
+    padding: 1.5rem;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .welcomeText {
+    font-size: 1.25rem;
+  }
+}
