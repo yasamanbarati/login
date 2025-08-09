@@ -26,27 +26,6 @@ Component Library: Custom reusable components
 
 State Management: React hooks
 
-Project Structure
-text
-src/
-├── app/
-│   ├── auth/
-│   │   └── page.tsx            # Login page
-│   ├── dashboard/
-│   │   └── page.tsx            # Dashboard page
-│   └── layout.tsx              # Root layout
-├── components/
-│   ├── Button/
-│   │   ├── Button.tsx          # Button component
-│   │   └── Button.module.scss  # Button styles
-│   ├── Input/
-│   │   ├── Input.tsx           # Input component
-│   │   └── Input.module.scss   # Input styles
-│   └── icons/                  # SVG icons
-├── services/
-│   └── authService.ts          # Authentication service
-└── styles/
-    └── globals.scss            # Global styles
 Getting Started
 Prerequisites
 Node.js (v18+)
