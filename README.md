@@ -1,36 +1,90 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+This project implements a responsive authentication flow with Next.js, TypeScript, and SCSS Modules. It features a login page with phone number validation and a dashboard that displays user information after successful authentication.
 
-## Getting Started
+Features
+✅ Phone number validation (Iranian format: 09xxxxxxxxx)
 
-First, run the development server:
+✅ User authentication with random user API
 
-```bash
+✅ Protected routes with automatic redirection
+
+✅ Responsive design with SCSS Modules
+
+✅ Reusable UI components (Button, Input)
+
+✅ Persistent user session with localStorage
+
+✅ Loading states and error handling
+
+Tech Stack
+Framework: Next.js (App Router)
+
+Language: TypeScript
+
+Styling: SCSS Modules with nesting support
+
+Component Library: Custom reusable components
+
+State Management: React hooks
+
+Project Structure
+text
+src/
+├── app/
+│   ├── auth/
+│   │   └── page.tsx            # Login page
+│   ├── dashboard/
+│   │   └── page.tsx            # Dashboard page
+│   └── layout.tsx              # Root layout
+├── components/
+│   ├── Button/
+│   │   ├── Button.tsx          # Button component
+│   │   └── Button.module.scss  # Button styles
+│   ├── Input/
+│   │   ├── Input.tsx           # Input component
+│   │   └── Input.module.scss   # Input styles
+│   └── icons/                  # SVG icons
+├── services/
+│   └── authService.ts          # Authentication service
+└── styles/
+    └── globals.scss            # Global styles
+Getting Started
+Prerequisites
+Node.js (v18+)
+
+npm (v9+)
+
+Installation
+Clone the repository:
+
+bash
+git clone https://github.com/your-username/auth-dashboard-flow.git
+cd auth-dashboard-flow
+Install dependencies:
+
+bash
+npm install
+# or
+yarn install
+Run the development server:
+
+bash
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Open your browser at:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+text
+- Network:      http://192.168.34.169:3000
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Production Build
+bash
+npm run build
+npm start
+API Integration
+The authentication flow uses the following API:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Endpoint: https://randomuser.me/api/?results=1&nat=us
 
-## Learn More
+Method: GET
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Purpose: Fetch random user data for authentication simulation
